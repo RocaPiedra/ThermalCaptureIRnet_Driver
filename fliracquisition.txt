@@ -1,0 +1,4 @@
+gstlaunch v udpsrc port=5000 caps="application/xrtp" ! rtph264depay !
+ffdec_h264 ! ffmpegcolorspace ! ximagesink sync=false
+
+# DEFAULT_IP http://192.168.0.47/
