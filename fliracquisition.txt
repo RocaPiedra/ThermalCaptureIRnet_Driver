@@ -2,3 +2,15 @@ gstlaunch v udpsrc port=5000 caps="application/xrtp" ! rtph264depay !
 ffdec_h264 ! ffmpegcolorspace ! ximagesink sync=false
 
 # DEFAULT_IP http://192.168.0.47/
+
+with OpenCV:
+const char* flir_context = "udpsrc port=5000 caps=application/x-rtp,media=video,encoding-name=H264 \
+! rtph264depay \
+! h264parse \
+! nvv4l2decoder \
+! nvvidconv \
+! video/x-raw,format=BGRx \
+! videoconvert \
+! video/x-raw,format=BGR \
+! appsink drop=1";
+    
