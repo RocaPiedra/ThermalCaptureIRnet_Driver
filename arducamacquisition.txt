@@ -1,6 +1,0 @@
-typical gst launch to parse with camera from dev/video*:
-v4l2src device=/dev/video* ! videoconvert ! capsfilter ! appsink
-
-if camera is in /dev/video0
-maybe opencv videocapture function can obtain frames without gstreamer
-that is because when using VideoCapture cam(0)-> 0 is pointing at /dev/video0

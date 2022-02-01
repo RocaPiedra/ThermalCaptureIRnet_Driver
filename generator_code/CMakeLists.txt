@@ -16,3 +16,7 @@ target_link_libraries(vidWriter ${OpenCV_LIBS})
 
 add_executable(orderedWriter videoGeneratorOpenCV.cpp)
 target_link_libraries(orderedWriter ${OpenCV_LIBS})
+
+add_executable(syncro syncro.cpp)
+target_include_directories(syncro PUBLIC ${GSTREAMER_INCLUDE_DIRS})
+target_link_libraries(syncro ${GSTREAMER_LIBRARIES} ${OpenCV_LIBS})

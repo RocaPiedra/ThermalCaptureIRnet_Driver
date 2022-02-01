@@ -2,3 +2,5 @@ build
 documents
 Video.avi
 .vscode
+generator_code/
+test_code/

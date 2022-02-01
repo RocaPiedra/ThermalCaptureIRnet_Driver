@@ -23,3 +23,11 @@ target_link_libraries(${PROJECT_NAME} ${GSTREAMER_LIBRARIES})
 add_executable(gstcv FlirGstOpenCV.cpp)
 target_include_directories(gstcv PUBLIC ${GSTREAMER_INCLUDE_DIRS})
 target_link_libraries(gstcv ${GSTREAMER_LIBRARIES} ${OpenCV_LIBS})
+
+add_executable(onlygstcv GstOpenCV.cpp)
+target_include_directories(onlygstcv PUBLIC ${GSTREAMER_INCLUDE_DIRS})
+target_link_libraries(onlygstcv ${GSTREAMER_LIBRARIES} ${OpenCV_LIBS})
+
+add_executable(syncro syncro.cpp)
+target_include_directories(syncro PUBLIC ${GSTREAMER_INCLUDE_DIRS})
+target_link_libraries(syncro ${GSTREAMER_LIBRARIES} ${OpenCV_LIBS})
